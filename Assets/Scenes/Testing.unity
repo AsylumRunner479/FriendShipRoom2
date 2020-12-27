@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca6d5eddf27cf64bbb522b7f32552d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  unitMaterial: {fileID: 2100000, guid: a51a24dae528e5043850dc3fc3007178, type: 2}
 --- !u!4 &111485318
 Transform:
   m_ObjectHideFlags: 0
