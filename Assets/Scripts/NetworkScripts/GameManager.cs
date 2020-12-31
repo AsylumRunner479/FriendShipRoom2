@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         AvailablePlayers = FindObjectsOfType<Health>();
         //spawn Level
+        SpawnManager.instance.FindSpawn();
         int team = Random.Range(0, AvailablePlayers.Length);
         for (int i = 0; i < AvailablePlayers.Length; i++)
         {

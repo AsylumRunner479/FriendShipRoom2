@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviourPunCallbacks, IPunObservable
 {
+    public float timer;
+    public bool firstspawn = false;
     public bool isAlien;
     Renderer[] visuals;
     public int health = 100;
     public Text[] text;
+    public GameObject self;
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -28,6 +31,7 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     }
     IEnumerator Respawn()
     {
+        SpawnManager.instance.FindSpawn();
         SetRenderers(false);
         health = 100;
         GetComponent<CharacterController>().enabled = false;
@@ -65,11 +69,18 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
     void Start()
     {
         visuals = GetComponentsInChildren<Renderer>();
+        timer = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
+        if (timer <= 0 && firstspawn == false)
+        {
+            Respawn();
+            firstspawn = true;
+        }
         if (health <= 0)
         {
             if (isAlien == true && GameManager.InGame == true)
@@ -85,6 +96,10 @@ public class Health : MonoBehaviourPunCallbacks, IPunObservable
                 StartCoroutine(Respawn());
             }
             
+        }
+        if (self.transform.position.y <= -20f)
+        {
+            Damage(100);
         }
     }
 }

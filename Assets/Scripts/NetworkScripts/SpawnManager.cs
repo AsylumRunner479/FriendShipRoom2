@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        SpawnPoint = GameObject.FindGameObjectsWithTag("Spawn");
+        FindSpawn();
 
     }
 
@@ -18,5 +18,8 @@ public class SpawnManager : MonoBehaviour
     {
         return SpawnPoint[Random.Range(0, SpawnPoint.Length)].transform;
     }
-    
+    public void FindSpawn()
+    {
+        SpawnPoint = GameObject.FindGameObjectsWithTag("Spawn");
+    }
 }
