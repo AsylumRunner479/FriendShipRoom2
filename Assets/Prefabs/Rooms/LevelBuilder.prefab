@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4785314055513926331}
-  - component: {fileID: 4785314055513926328}
+  - component: {fileID: 8802056936848034506}
   m_Layer: 0
   m_Name: LevelBuilder
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4785314055513926328
+--- !u!114 &8802056936848034506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,16 +40,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4785314055513926330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223d1447331677e44975e6cdfecd044d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e3e1f02dcff7884a9db38aaca12198b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoomPrefab: {fileID: 596408110797897296, guid: 205619425a473674bb0320850f997474, type: 3}
-  endRoomPrefab: {fileID: 9020125275697246184, guid: d26072041746c2143a29e76a974b70b3, type: 3}
-  roomPrefabs:
-  - {fileID: 3175015610628422777, guid: c3979593c85198040a200d548b9f622a, type: 3}
-  - {fileID: 4507508371314418699, guid: cf2cc7b72020ddd4fb9302e9ddfb53b8, type: 3}
-  - {fileID: 4126553495812866468, guid: 66598130e698a9c4fbd15cfe68593ada, type: 3}
-  - {fileID: 8615717610388625240, guid: 6980c2ceeeba6ac44aa6efbe8e71f1ed, type: 3}
-  - {fileID: 1285308160932211427, guid: 56ba54331011b6046bef04037d8146f5, type: 3}
-  - {fileID: 4596795475770659212, guid: b2c7bd0b948e5ac47a1eb51ef7b769c3, type: 3}
-  iterationRange: {x: 42, y: 42}
