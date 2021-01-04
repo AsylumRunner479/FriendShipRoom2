@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Spawn
+  - floor
   layers:
   - Default
   - TransparentFX

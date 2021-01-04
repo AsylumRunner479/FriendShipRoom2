@@ -26,13 +26,13 @@ public class RoomSpawner : MonoBehaviour
             HasRoom = false;
             for (int j = 0; j < zone.Length; j++)
             {
-                if (zone[j].tag == "Spawn")
+                if (zone[j].tag == "floor")
                 {
                     HasRoom = true;
 
                 }
             }
-            if (HasRoom != true && AvailableRooms.roomsHere <= 200)
+            if (HasRoom == false && AvailableRooms.roomsHere <= 500)
             {
                 random = Random.Range(0, roomavailable.rooms.Length);
                 Instantiate(roomavailable.rooms[random], neighbour[i].transform.position, Quaternion.identity);
