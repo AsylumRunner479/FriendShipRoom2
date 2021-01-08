@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4785314055513926331}
-  - component: {fileID: 8802056936848034506}
+  - component: {fileID: 1035350070}
   m_Layer: 0
   m_Name: LevelBuilder
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8802056936848034506
+--- !u!114 &1035350070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,6 +40,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4785314055513926330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3e1f02dcff7884a9db38aaca12198b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ca6d5eddf27cf64bbb522b7f32552d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitMesh: {fileID: 0}
+  unitMaterial: {fileID: 0}
+  gameObjectPrefab:
+  - {fileID: 2641214254171717566, guid: cf2cc7b72020ddd4fb9302e9ddfb53b8, type: 3}
+  - {fileID: 2641214254171717566, guid: 56ba54331011b6046bef04037d8146f5, type: 3}
+  xSize: 21
+  ySize: 21
+  spacing: 4
+  buildingHeight: 0
